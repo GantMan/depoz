@@ -1,11 +1,11 @@
 class CasesScreen < PM::TableScreen
-  title "Cases"
+  title "Depoz Cases"
   searchable placeholder: "Search cases"
   stylesheet CasesScreenStylesheet
 
   def on_load
-    set_nav_bar_button :left, title: "Settings", action: :nav_left_button
-    set_nav_bar_button :right, title: "Right", action: :nav_right_button
+    set_nav_bar_button :left, action: :nav_left_button, image: FIFontAwesomeIcon.cogIcon.imageWithBounds([[0,0],[25,25]], color: rmq.color.black)
+    set_nav_bar_button :right, system_item: :add, action: :nav_right_button
   end
 
   def nav_left_button
@@ -18,7 +18,6 @@ class CasesScreen < PM::TableScreen
 
   def table_data
     [{
-      title: "Cases",
       cells: [
         { title: "McDonald's Coffee", action: :say_hi, arguments: { case: "Coffee stuffs" }},
         { title: "George v Georgia", action: :say_hi, arguments: { case: "Georgemania!" }},

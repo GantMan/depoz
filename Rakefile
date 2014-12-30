@@ -11,7 +11,7 @@ Motion::Project::App.setup do |app|
   # Use `rake config' to see complete project settings
 
   app.name = 'depoz'
-  app.identifier = 'com.your_domain_here.depoz'
+  app.identifier = 'com.iconoclastlabs.depoz'
 
   app.short_version = '0.1.0'
   # Get version from git
@@ -39,22 +39,23 @@ Motion::Project::App.setup do |app|
   app.interface_orientations = [:portrait, :landscape_left, :landscape_right, :portrait_upside_down]
 
   app.files += Dir.glob(File.join(app.project_dir, 'lib/**/*.rb'))
-  
+
   # app.fonts = ['Oswald-Regular.ttf', 'FontAwesome.otf'] # These go in /resources
   # app.frameworks += %w(QuartzCore CoreGraphics MediaPlayer MessageUI CoreData)
   #
   # app.vendor_project('vendor/Flurry', :static)
   # app.vendor_project('vendor/DSLCalendarView', :static, :cflags => '-fobjc-arc') # Using arc
   #
-  # app.pods do
+  app.pods do
   #   pod 'AFNetworking'
   #   pod 'JGProgressHUD'
   #   pod 'SVProgressHUD'
   #   pod 'JMImageCache'
-  # end
-  
+      pod "FontasticIcons"
+  end
+
   app.development do
-    app.codesign_certificate = "iPhone Developer: YOURNAME"
+    app.codesign_certificate = "iPhone Developer: Gant Laborde"
     app.provisioning_profile = "signing/depoz.mobileprovision"
   end
 
@@ -66,7 +67,7 @@ Motion::Project::App.setup do |app|
     app.entitlements['application-identifier'] = app.seed_id + '.' + app.identifier
     app.entitlements['keychain-access-groups'] = [ app.seed_id + '.' + app.identifier ]
   end
- 
+
   puts "Name: #{app.name}"
   puts "Using profile: #{app.provisioning_profile}"
   puts "Using certificate: #{app.codesign_certificate}"
