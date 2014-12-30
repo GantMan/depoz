@@ -13,6 +13,10 @@ class CasesScreen < PM::TableScreen
     }]
   end
 
+  def say_hi(args={})
+    mp "Hi #{args[:case]}"
+  end
+
   # Remove the following if you're only using portrait
   def will_animate_rotate(orientation, duration)
     find.all.reapply_styles
