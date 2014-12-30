@@ -1,6 +1,6 @@
 class CasesScreen < PM::TableScreen
   title "Depoz Cases"
-  searchable placeholder: "Search cases"
+  searchable placeholder: "Search Cases"
   stylesheet CasesScreenStylesheet
 
   def on_load
@@ -27,6 +27,7 @@ class CasesScreen < PM::TableScreen
 
   def say_hi(args={})
     mp "Hi #{args[:case]}"
+    open DepositionsScreen
   end
 
   # Remove the following if you're only using portrait
