@@ -3,6 +3,19 @@ class CasesScreen < PM::TableScreen
   searchable placeholder: "Search cases"
   stylesheet CasesScreenStylesheet
 
+  def on_load
+    set_nav_bar_button :left, title: "Settings", action: :nav_left_button
+    set_nav_bar_button :right, title: "Right", action: :nav_right_button
+  end
+
+  def nav_left_button
+    mp 'Left button'
+  end
+
+  def nav_right_button
+    mp 'Right button'
+  end
+
   def table_data
     [{
       title: "Cases",
