@@ -20,3 +20,5 @@ gem "afmotion" # Networking
 
 # Add slide-over controller
 gem 'rmq-slide-over-control', :git => 'git@github.com:infinitered/rmq-slide-over-control.git'
+
+gem 'newclear'
