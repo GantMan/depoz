@@ -18,16 +18,17 @@ class DepositionsScreen < PM::TableScreen
 
   def table_data
     [{
-      title: "Jane Doe",
+      title: "January 2nd, 2015",
       cells: [
-        { title: "1/12/14", action: :say_hi, arguments: { case: "Jane 12th" }},
-        { title: "1/13/14", action: :say_hi, arguments: { case: "Jane 13th" }},
+        { title: "Sherlock Holmes", action: :say_hi, arguments: { case: "Jan Sherklock" }},
+        { title: "John Doe", action: :say_hi, arguments: { case: "Jan John" }},
       ]
     },{
-      title: "John Doe",
+      title: "July 3rd, 2014",
       cells: [
-        { title: "1/12/14", action: :say_hi, arguments: { case: "John 12th" }},
-        { title: "2/3/14", action: :say_hi, arguments: { case: "February!" }},
+        { title: "Hugh Jackman", action: :say_hi, arguments: { case: "Jul Hugh" }},
+        { title: "George Lucas", action: :say_hi, arguments: { case: "Jul Lucas" }},
+        { title: "John Doe", action: :say_hi, arguments: { case: "Jul John" }},
       ]
     }]
   end

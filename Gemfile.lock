@@ -1,3 +1,10 @@
+GIT
+  remote: git@github.com:infinitered/rmq-slide-over-control.git
+  revision: b8637f3a2cb4b75db0224eb1ae3bfccae7daa516
+  specs:
+    rmq-slide-over-control (0.5.3)
+      ruby_motion_query (>= 0.8.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -79,3 +86,4 @@ DEPENDENCIES
   cdq
   rake
   redpotion
+  rmq-slide-over-control!
