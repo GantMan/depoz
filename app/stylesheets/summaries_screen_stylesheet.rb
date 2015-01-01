@@ -33,6 +33,9 @@ class SummariesScreenStylesheet < ApplicationStylesheet
   end
 
   def slide_bar_label st
-    st.text = "Drag"
+    st.frame = {l: 10, fr: 10, t: 2, fb: 2}
+    st.text = "Drag me"
+    st.color = color.white
+    st.text_alignment = :center
   end
 end
